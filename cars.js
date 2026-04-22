@@ -25,3 +25,33 @@ makeNames.forEach((makeName) => {
   option.text = makeName.toUpperCase();
   dropList.appendChild(option);
 });
+
+//Loading a new car
+loadCar();
+
+//Helper functions
+function selectCar() {
+  return carsDetails[Math.floor(Math.random() * carsDetails.length)];
+}
+function loadCar() {
+  selectedCar = selectCar();
+  carType.textContent = "Cars";
+  carName.textContent = selectedCar[1];
+  carImg.src = selectedCar[2];
+  carImg.classList.remove("hidden");
+  guessBtn.classList.remove("disabled");
+}
+
+//Event Listener
+guessBtn.addEventListener("click", function () {
+  guessBtn.classList.add("disabled");
+  let chosenCar = dropList.value;
+  if (chosenCar === selectedCar[0]) {
+    correctCount += 1;
+  }
+  totalCount += 1;
+  correctGuesses.textContent = correctCount;
+  totalGuesses.textContent = totalCount;
+
+  loadCar();
+});
