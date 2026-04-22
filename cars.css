@@ -1,0 +1,12 @@
+.hidden {
+    display: none;
+}
+.disabled {
+    display: none;
+}
+#guess-btn:hover {
+    cursor: pointer;
+}
+#car-img {
+    width: 300px;
+}
