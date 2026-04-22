@@ -17,3 +17,11 @@ let totalGuesses = document.getElementById("total");
 let totalCount = 0,
   correctCount = 0;
 let selectedCar;
+
+//Populate the dropdown with elements from array
+makeNames.forEach((makeName) => {
+  let option = document.createElement("option");
+  option.value = makeName;
+  option.text = makeName.toUpperCase();
+  dropList.appendChild(option);
+});
