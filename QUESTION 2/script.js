@@ -112,3 +112,4 @@ uiLetterSpacing.addEventListener("change", function() {
 uiLetterSize.addEventListener("change", function() {
     outputSection.style.fontSize = uiLetterSize.value + "px";
 })
+
